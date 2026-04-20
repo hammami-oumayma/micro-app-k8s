@@ -28,3 +28,14 @@ spec:
   ports:
   - port: 3000
     targetPort: 3000
+        env:
+        - name: JWT_KEY
+          valueFrom:
+            secretKeyRef:
+              name: micro-app-secrets
+              key: JWT_KEY
+        - name: MONGO_URI
+          valueFrom:
+            secretKeyRef:
+              name: micro-app-secrets
+              key: MONGO_URI
