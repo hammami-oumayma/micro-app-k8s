@@ -16,7 +16,7 @@ spec:
       - name: expiration
         image: hammamioumayma/expiration:latest
         ports:
-        - containerPort: 3000
+        - containerPort: 3005
         env:
         - name: JWT_KEY
           valueFrom:
@@ -42,5 +42,5 @@ spec:
   selector:
     app: expiration
   ports:
-  - port: 3000
-    targetPort: 3000
+  - port: 3005
+    targetPort: 3005
