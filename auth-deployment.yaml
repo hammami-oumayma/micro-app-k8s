@@ -27,6 +27,11 @@ spec:
           valueFrom:
             secretKeyRef:
               name: micro-app-secrets
+        - name: RABBITMQ_URI
+          valueFrom:
+            secretKeyRef:
+              name: micro-app-secrets
+              key: RABBITMQ_URI
               key: MONGO_URI
 ---
 apiVersion: v1
